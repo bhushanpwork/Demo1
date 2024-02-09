@@ -1,0 +1,53 @@
+package com.RestAPI;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Product {
+	
+
+
+	private int prodId;
+	private String prodName;
+	private Double prodPrize;
+	public int getProdId() {
+		return prodId;
+	}
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
+	public String getProdName() {
+		return prodName;
+	}
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
+	}
+	public Double getProdPrize() {
+		return prodPrize;
+	}
+	public void setProdPrize(Double prodPrize) {
+		this.prodPrize = prodPrize;
+	}
+	public Product(int prodId, String prodName, Double prodPrize) {
+		super();
+		this.prodId = prodId;
+		this.prodName = prodName;
+		this.prodPrize = prodPrize;
+	}
+	
+	public Product() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

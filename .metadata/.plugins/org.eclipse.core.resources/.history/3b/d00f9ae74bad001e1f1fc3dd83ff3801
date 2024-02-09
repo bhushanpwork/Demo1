@@ -1,0 +1,33 @@
+package com.RestAPI;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductController {
+  
+	@PostMapping("/product")
+	private String saveProduct(@RequestBody Product P) {
+		// logic to persist
+		System.out.println(P);
+		return "Product Saved";
+		
+	}
+	
+	@GetMapping("/product/{Pid}")
+	private String getProduct(@PathVariable Integer Pid) {
+		Product p=null;
+		if(Pid==100) 
+		{
+			 p=new Product(100 ,"Mouse",400);
+		}else if(Pid==101) {
+			 p=new Product(101 ,"HD",3400);
+		}
+		
+		return p;
+		
+	}
+}
