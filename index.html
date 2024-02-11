@@ -4,16 +4,31 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <style>
+      body{
+       color: green;
+       background-color: black;
+       
+      }
+   </style>
 </head>
-<body>
-   <h1>This Is javascript</h1>
+<body> 
+
+   <h1 color="green">This Is javascript</h1>
+
 </body>
 
 <script>
-   let a=15
-   let b=10
-   let c=15
-   sum=a+b+c;
-   console.log(sum)
+   let userName=prompt("Please Enter YOur Name");
+
+   alert(`Your Name is ${userName}`)
+
+   confirm(`Are YOu ${userName}`)
+
+   let admin=userName;
+
+   document.write(`Hello ${admin}`);
+
+   
 </script>
 </html>
